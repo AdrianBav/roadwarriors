@@ -1,0 +1,26 @@
+<body>
+	<div id="slider" class="camera_wrap">
+		<div data-src="/assets/images/sliders/slider1.jpg"></div>
+		<div data-src="/assets/images/sliders/slider2.jpg"></div>
+		<div data-src="/assets/images/sliders/slider3.jpg"></div>
+	</div>
+	<div class="clear"></div>
+
+	<!-- Slider Controller -->
+    <script>
+       $(document).ready(function() {            
+            
+            jQuery('#slider').camera({
+				height: '985px',
+				pagination: false,
+				navigation: true,
+				navigationHover: true,
+				playPause: false,
+				pauseOnClick: false,
+				hover: false,
+				time: 7000
+            });
+
+        });
+    </script> 
+</body>

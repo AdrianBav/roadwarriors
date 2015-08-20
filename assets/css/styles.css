@@ -1,0 +1,280 @@
+
+/*
+ * Content Wrapper.
+ */
+
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
+
+/*
+ * Header.
+ */
+
+header {
+    position: relative;
+}
+
+header hgroup {
+    display: inline-block;      /* Set to inline-block so that it follows the width to the text within. */
+    margin: 25px 0 5px;
+    cursor: pointer;
+}
+
+header hgroup h1 {
+    color: #000000;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 56px;
+    margin: 0;
+}
+
+header hgroup h2 {
+    color: #838080;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin: 0;
+    margin-top: -22px;
+    text-align: right;
+}
+
+
+/*
+ * Top Navigation.
+ */
+
+header nav {    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+header nav ul {    
+    list-style: none;
+    margin: 0;    
+    margin-bottom: 5px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li:after {
+    color: #838080;
+    content: ' |';
+}
+
+li:last-child:after {
+    content: '';
+}
+
+header nav ul li a {
+    color: #838080;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+header nav ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/*
+ * Main Structure.
+ */
+
+#main {
+    height: 985px;
+    position: relative;
+}
+
+#subupage-container {
+    position: absolute;
+    top: 0;
+    left: 0;        
+    min-height: 985px;
+    margin-left: 200px;
+    z-index: 2;
+}
+
+#subupage-container > div {
+    padding-top: 50px;
+    padding-left: 15px;
+    /* Set scroll bars and set width and height equal to wrapper, minus padding. */
+    overflow: auto;
+    height: 935px;
+    width: 745px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*
+ * Main Navigation.
+ */
+
+#main nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#main nav ul {  
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
+
+#main nav ul li:not(:last-child) {
+    border-bottom: 8px solid #ffffff;
+}
+
+#main nav ul li a {
+    display: block;
+    width: 200px;
+    height: 157.5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    outline: none;
+    position: relative;
+}
+
+#main nav ul li.movable a {
+    margin-left: 200px;
+}
+
+#main nav ul li a span {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    color: #464242;
+    font-family: 'Jura', sans-serif;
+    font-size: 37px;
+}
+
+#main nav ul li a section {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: #464242;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px;    
+    letter-spacing: 0px;
+    text-align: right;
+    opacity: 0;
+}
+
+.camera_prev {
+    left: auto;
+    top: 20px;    
+    right: -50px;
+}
+
+.camera_next {
+    top: 70px;
+    right: -50px;
+}
+
+
+/*
+ * Sub Page Components.
+ */
+
+.image-wrapper img {
+    display: block;
+    margin: 0 auto;
+}
+
+#cc-slider {
+    margin: 0 auto;
+    /* Add 100px to both the width and height to allow for space required by 3D effects. */
+    height: 380px;
+    width: 594px;    
+    /* Add a loading image. */
+    background: #fff url(/assets/images/camera-loader.gif) no-repeat center;
+    background: rgba(255, 255, 255, 0.9) url(/assets/images/camera-loader.gif) no-repeat center;
+}
+
+#cc-slider img {
+    visibility: hidden;
+}
+
+#cc-slider a.slider-nav {  
+    width: 35px;
+    height: 34px;
+    top: 50%;
+    margin-top: -17px;      
+}
+
+#cc-slider .slider-nav.prev {
+    background: url(/assets/images/left-arrow.png) no-repeat;
+    left: -17px;
+}
+
+#cc-slider .slider-nav.next {
+    background: url(/assets/images/right-arrow.png) no-repeat;
+    right: -17px;
+}
+
+#join-form {
+    background-color: #b3d4fc;
+    width: 710px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+div.ui-datepicker {
+    font-size: 13px;
+}
+
+
+/* 
+ * Footer.
+ */
+
+footer {
+    margin: 25px 0 15px;
+    border-top: 1px solid #d7d7d7;
+}
+
+footer > section {
+    width: 50%;
+    float: left;
+}
+
+footer #copyright {    
+    color: #000000;
+    font-family: 'Jura', sans-serif;
+    font-size: 14px;    
+    font-weight: bold;
+}
+
+footer #authors {
+    color: #838080;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;    
+    text-align: right;
+}
+
+footer #authors a {
+    color: #838080;
+    text-decoration: none;
+}
+
+footer #authors a:hover {
+    color: #000000;
+    text-decoration: none;
+}
